@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Екатерина Булыгина](https://up.htmlacademy.ru/adaptive/18/user/824601).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Петров] (https://htmlacademy.ru/profile/id617077).
 
 ---
 
