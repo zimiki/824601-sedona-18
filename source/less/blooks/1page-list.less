@@ -1,0 +1,48 @@
+.page-list {
+  .reset-list();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-list__link {
+  color: #192144;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+
+
+  &:hover {
+    color: #ffd74b; /*Вопрос: Как понять что за эффект?"*/
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-list {
+    margin-right: 100px;
+    margin-left: 100px;
+    align-items: flex-start;
+  }
+
+  .page-list__link {
+    font-size: 60px;
+    line-height: 71px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .page-list__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    margin-right: 34px;
+  }
+}

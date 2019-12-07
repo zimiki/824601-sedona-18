@@ -1,0 +1,148 @@
+@import "normalize.less";
+@import "variables.less";
+@import "mixins.less";
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.block {
+  box-sizing: content-box;
+}
+
+body {
+  min-width: 320px;
+  font-family: "ptsans", "Arial", sans-serif;
+  font-weight: normal;
+  color: #333333;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: green;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  display: block;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #81b3d2;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.map__image {
+  width: 320px;
+  height: 350px;
+}
+
+@import "blooks/container.less";
+@import "blooks/page-header.less";
+@import "blooks/promo.less";
+@import "blooks/reason.less";
+@import "blooks/details-list.less";
+@import "blooks/hotel-search.less";
+@import "blooks/social.less";
+@import "blooks/page-footer.less";
+
+
+/*
+.main-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__title {
+  display: flex;
+  font-size: 36px;
+  line-height: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  background-color: #161c36;
+  margin: 0;
+}
+
+.orange-title {
+  font-style: inherit;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ff8d30;
+}
+
+
+@media (min-width: @tablet-width) {
+  body {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .page__title {
+    font-size: 60px;
+    line-height: 70px;
+    background-color: #182044;
+    padding-right: 145px;
+    padding-left: 145px;
+    margin: 0 auto;
+  }
+
+  .main-page .page__title {
+    padding-top: 30px;
+  }
+
+  .orange-title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .page__title {
+    background-color: transparent;
+    position: absolute;
+    width: 420px;
+    top: 40px;
+    left: 40px;
+    padding: 0;
+  }
+
+  .page__title--inner {
+    position: static;
+  }
+}
+*/
