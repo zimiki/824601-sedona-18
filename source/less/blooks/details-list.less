@@ -2,15 +2,17 @@
   .reset-list();
   color: #333333;
   background-color: #ffffff;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding-top: 38px;
+  padding-bottom: 8px;
 }
 
 .details-list__item {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding-left: 50px;
+  margin: 0 auto;
   margin-bottom: 15px;
 
   &::before {
@@ -18,35 +20,42 @@
     content: "";
     width: 40px;
     height: 40px;
-    left: 5px;
-    top: 1px;
-    background-color: salmon;
     background-repeat: no-repeat;
   }
 
   &--house::before {
     background-image: url("../img/icon-house.svg");
     background-size: auto 37px;
+    left: 1px;
+    top: -11px;
   }
 
   &--gift::before {
     background-image: url("../img/icon-gift.svg");
     background-size: auto 37px;
+    left: 5px;
+    top: -12px;
   }
 
   &--food::before {
     background-image: url("../img/icon-burger.svg");
     background-size: auto 35px;
+    left: -1px;
+    top: -7px;
   }
 }
-
 
 .details-list__name {
   color: #000000;
   font-size: 18px;
   line-height: 21px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
+}
+
+.details-list__text {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 @media (min-width: @tablet-width) {
@@ -70,7 +79,6 @@
       height: 76px;
       left: calc(50% - 38px);
       top: 57px;
-      background-color: salmon;
       background-repeat: no-repeat;
     }
 
