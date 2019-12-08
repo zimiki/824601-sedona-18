@@ -2,6 +2,8 @@
   position: relative;
   text-align: center;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 .promo::after {
@@ -21,11 +23,14 @@
 .promo__image-wrapper {
   position: relative;
   height: 389px;
-  background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-position: center, center;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 280px, cover;
-  margin-bottom: 43px;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .promo__image-wrapper::after {
@@ -42,12 +47,16 @@
   z-index: 10;
 }
 
+.promo__welcome {
+  margin-top: 90px;
+}
+
 .promo__title {
   color: #000000;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
-  margin-top: 0;
+  margin-top: 43px;
   margin-right: 20px;
   margin-bottom: 40px;
   margin-left: 20px;
@@ -57,4 +66,57 @@
   margin-top: 0;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    padding-bottom: 40px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+
+  .promo__image-wrapper {
+    height: 518px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  .promo__welcome {
+    width: 460px;
+    margin-top: 78px;
+  }
+
+  .promo__image-wrapper::after {
+    bottom: -2px;
+    height: 18%;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+  }
+
+  .promo__title,
+  .promo__description {
+    width: 500px;
+    align-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__image-wrapper {
+    height: 518px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .promo__image-wrapper::after {
+    height: 18%;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
 }

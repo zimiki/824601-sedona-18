@@ -1,9 +1,13 @@
 .hotel-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 30px;
   padding-right: 20px;
   padding-bottom: 49px;
   padding-left: 20px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .hotel-search__title {
@@ -19,4 +23,26 @@
 
 .hotel-search__button {
   width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .hotel-search {
+    padding-top: 46px;
+    padding-left: 20.1%;
+    padding-right: 20.1%;
+  }
+
+  .hotel-search__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .hotel-search {
+    padding-left: 30.8%;
+    padding-right: 30.8%;
+  }
 }
