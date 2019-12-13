@@ -56,6 +56,10 @@
 .details-list__text {
   margin: 0;
   margin-bottom: 15px;
+
+  & br {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -65,14 +69,21 @@
     flex-direction: row;
     text-align: center;
     padding: 0;
+    min-height: 330px;
   }
 
   .details-list__item {
+    width: 33.3%;
     padding-top: 160px;
-    padding-bottom: 62px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin-bottom: 0;
+
+    &--gift {
+      order: 1;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
 
     &::before {
       width: 76px;
@@ -88,24 +99,32 @@
 
     &--gift::before {
       background-size: auto 77px;
+      left: calc(50% - 34px);
     }
 
     &--food::before {
       background-size: auto 68px;
+      top: 62px;
     }
   }
 
-  .details-list__item--gift {
-    order: 1;
+  .details-list__name {
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+
+  .details-list__text {
+    margin: 0;
+
+    & br {
+      display: inline;
+    }
   }
 }
 
 
-@media (min-width: @desktop-width) {
+/*@media (min-width: @desktop-width) {
   .details-list__item {
-    padding-top: 160px;
-    padding-bottom: 83px;
-    padding-left: 60px;
-    padding-right: 60px;
+
   }
-}
+}*/

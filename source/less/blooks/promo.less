@@ -36,7 +36,7 @@
 .promo__image-wrapper::after {
   position: absolute;
   content: "";
-  width: 100%;
+  width: 101%;
   height: 18%;
   background-image: url("../img/bg-intro-triangle-mobile.svg");
   background-position: center 100%;
@@ -72,13 +72,12 @@
 
 @media (min-width: @tablet-width) {
   .promo {
-    padding-bottom: 40px;
+    padding-bottom: 45px;
 
     &::after {
       display: none;
     }
   }
-
 
   .promo__image-wrapper {
     height: 518px;
@@ -96,7 +95,7 @@
 
   .promo__image-wrapper::after {
     bottom: -2px;
-    height: 18%;
+    background-size: 100.1%;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
   }
 
@@ -104,6 +103,14 @@
   .promo__description {
     width: 500px;
     align-self: center;
+    margin-top: 31px;
+  }
+
+  .promo__title {
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 50px;
+    margin-bottom: 0;
   }
 }
 
