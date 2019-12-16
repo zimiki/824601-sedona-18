@@ -1,0 +1,236 @@
+.reason {
+  padding-top: 40px;
+  background-color: #eeeeee;
+}
+
+.reason__list {
+  .reset-list();
+  margin-top: -36px;
+  color: #333333;
+}
+
+.reason__item {
+  width: 280px;
+  min-height: 167px;
+  margin: 0 auto;
+  border-bottom: 1px #d6d6d6 solid;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.reason__item:first-child .reason__wrapper {
+  padding-top: 75px;
+}
+
+.reason__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 20px;
+}
+
+.reason__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+
+.reason__title br {
+  display: none;
+}
+
+.reason__number {
+  margin-bottom: 17px;
+}
+
+.reason__description {
+  margin: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.reason__image {
+  width: 320px;
+  height: 260px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--city {
+    background-image: url("../img/main-city-mobile@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-city-mobile@2x.jpg");
+    }
+  }
+
+  &--bridge {
+    background-image: url("../img/main-bridge-mobile@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-bridge-mobile@2x.jpg");
+    }
+  }
+}
+
+.reason__details-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.reason__item--big {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  & .reason__wrapper {
+    color: #ffffff;
+    background-color: @blue;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  & .reason__description {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .reason {
+    padding: 0;
+  }
+
+  .reason__list {
+    width: 768px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .reason__item {
+    width: 33.3%;
+    min-height: 256px;
+    margin: 0;
+    border: none;
+  }
+
+  .reason__wrapper {
+    padding-top: 44px;
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .reason__item--big {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    & .reason__wrapper {
+      width: 33.3%;
+      min-height: 256px;
+      padding-top: 45px;
+      padding-right: 44px;
+      padding-bottom: 20px;
+      padding-left: 45px;
+    }
+  }
+
+  .reason__image {
+    width: 66.6%;
+    height: auto;
+
+    &--city {
+      background-image: url("../img/main-city-tablet@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-city-tablet@2x.jpg");
+      }
+    }
+
+    &--bridge {
+      background-image: url("../img/main-bridge-tablet@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-bridge-tablet@2x.jpg");
+      }
+    }
+  }
+
+  .reason__item--big:nth-child(even) .reason__image {
+    order: -1;
+  }
+
+  .reason__title {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .reason__title br {
+    display: inline;
+  }
+
+  .reason__number {
+    margin-bottom: 22px;
+  }
+
+  .reason__description {
+    padding: 0;
+    margin: 0;
+  }
+
+  .reason__item:first-child .reason__wrapper {
+    padding-top: 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reason__list {
+    width: 1200px;
+  }
+
+  .reason__wrapper {
+    padding-top: 44px;
+  }
+
+  .reason__item--big {
+    & .reason__wrapper {
+
+      padding-top: 51px;
+      padding-right: 90px;
+      padding-left: 90px;
+    }
+  }
+
+  .reason__image {
+    &--city {
+      background-image: url("../img/main-city-desktop@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-city-desktop@2x.jpg");
+      }
+    }
+
+    &--bridge {
+      background-image: url("../img/main-bridge-desktop@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-bridge-desktop@2x.jpg");
+      }
+    }
+  }
+
+  .reason__item:first-child .reason__wrapper {
+    padding-top: 51px;
+    padding-right: 65px;
+    padding-left: 65px;
+  }
+}

@@ -1,0 +1,93 @@
+@import "normalize.less";
+@import "variables.less";
+@import "mixins.less";
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.block {
+  box-sizing: content-box;
+}
+
+body {
+  min-width: 320px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: normal;
+  color: #333333;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-page {
+  background-color: #ffffff;
+}
+
+.button {
+  display: block;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: @blue;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    color: #94b9d2;
+    background-color: @blue-active;
+  }
+}
+
+.map__image {
+  width: 320px;
+  height: 350px;
+}
+
+@import "blooks/container.less";
+@import "blooks/main-nav.less";
+@import "blooks/page-header.less";
+@import "blooks/promo.less";
+@import "blooks/reason.less";
+@import "blooks/details-list.less";
+@import "blooks/hotel-search.less";
+@import "blooks/map.less";
+@import "blooks/gallery.less";
+@import "blooks/photo.less";
+@import "blooks/video.less";
+@import "blooks/social.less";
+@import "blooks/page-footer.less";

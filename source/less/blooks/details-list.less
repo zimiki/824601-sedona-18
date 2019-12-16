@@ -1,0 +1,130 @@
+.details-list {
+  .reset-list();
+  color: #333333;
+  background-color: #ffffff;
+  padding-top: 38px;
+  padding-bottom: 8px;
+}
+
+.details-list__item {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 50px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+  }
+
+  &--house::before {
+    background-image: url("../img/icon-house.svg");
+    background-size: auto 37px;
+    left: 1px;
+    top: -11px;
+  }
+
+  &--gift::before {
+    background-image: url("../img/icon-gift.svg");
+    background-size: auto 37px;
+    left: 5px;
+    top: -12px;
+  }
+
+  &--food::before {
+    background-image: url("../img/icon-burger.svg");
+    background-size: auto 35px;
+    left: -1px;
+    top: -7px;
+  }
+}
+
+.details-list__name {
+  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+
+.details-list__text {
+  margin: 0;
+  margin-bottom: 15px;
+
+  & br {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .details-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 0;
+    min-height: 330px;
+  }
+
+  .details-list__item {
+    width: 33.3%;
+    padding-top: 160px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 0;
+
+    &--gift {
+      order: 1;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    &::before {
+      width: 76px;
+      height: 76px;
+      left: calc(50% - 38px);
+      top: 57px;
+      background-repeat: no-repeat;
+    }
+
+    &--house::before {
+      background-size: auto 74px;
+    }
+
+    &--gift::before {
+      background-size: auto 77px;
+      left: calc(50% - 34px);
+    }
+
+    &--food::before {
+      background-size: auto 68px;
+      top: 62px;
+    }
+  }
+
+  .details-list__name {
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+
+  .details-list__text {
+    margin: 0;
+
+    & br {
+      display: inline;
+    }
+  }
+}
+
+
+/*@media (min-width: @desktop-width) {
+  .details-list__item {
+
+  }
+}*/
