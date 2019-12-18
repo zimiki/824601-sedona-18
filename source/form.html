@@ -55,15 +55,15 @@
         <fieldset class="feedback__section feedback__section--yourself">
           <legend class="feedback__title">Представьтесь:</legend>
           <label class="feedback__yourself-item">
-            <span class="feedback__yourself-text">Имя*:</span>
+            <span class="feedback__text">Имя*:</span>
             <input class="feedback__yourself-input" type="text" name="name" placeholder="Петр" required>
           </label>
           <label class="feedback__yourself-item">
-            <span class="feedback__yourself-text">Фамилия*:</span>
+            <span class="feedback__text">Фамилия*:</span>
             <input class="feedback__yourself-input" type="text" name="surname" placeholder="Иванов" required>
           </label>
           <label class="feedback__yourself-item">
-            <span class="feedback__yourself-text">Отчество:</span>
+            <span class="feedback__text">Отчество:</span>
             <input class="feedback__yourself-input" type="text" name="patronymic" placeholder="Александрович">
           </label>
 
@@ -84,25 +84,25 @@
           <ul class="feedback__effect-list">
             <li>
               <label class="feedback__radio">
-                <span class="feedback__radio-icon"></span>
-                <input class="visually-hidden" type="radio" name="effect" id="effect-good" value="Скорее положительное"
+                <input class="visually-hidden feedback__radio-input" type="radio" name="effect" id="effect-good" value="Скорее положительное"
                   checked>
-                Скорее положительное
+                <span class="feedback__radio-icon"></span>
+                <span class="feedback__text">Скорее положительное</span>
               </label>
             </li>
             <li>
               <label class="feedback__radio">
+                <input class="visually-hidden feedback__radio-input" type="radio" name="effect" id="effect-bad" value="Скорее отрицательное">
                 <span class="feedback__radio-icon"></span>
-                <input class="visually-hidden" type="radio" name="effect" id="effect-bad" value="Скорее отрицательное">
-                Скорее отрицательное
+                <span class="feedback__text">Скорее отрицательное</span>
               </label>
             </li>
             <li>
               <label class="feedback__radio">
-                <span class="feedback__radio-icon"></span>
-                <input class="visually-hidden" type="radio" name="effect" id="effect-indefinite"
+                <input class="visually-hidden feedback__radio-input" type="radio" name="effect" id="effect-indefinite"
                   value="Затрудняюсь ответить">
-                Затрудняюсь ответить
+                <span class="feedback__radio-icon"></span>
+                <span class="feedback__text">Затрудняюсь ответить</span>
               </label>
             </li>
           </ul>
