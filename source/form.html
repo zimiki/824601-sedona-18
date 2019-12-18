@@ -52,18 +52,24 @@
       <h2 class="visually-hidden">Форма для отправки отзывов</h2>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset class="feedback__yourself">
+        <fieldset class="feedback__section feedback__section--yourself">
           <legend class="feedback__title">Представьтесь:</legend>
-          <label class="feedback__yourself-label" for="user-name">Имя*:</label>
-          <input class="feedback__yourself-input" type="text" name="name" id="user-name" placeholder="Петр">
-          <label class="feedback__yourself-label" for="user-surname">Фамилия*:</label>
-          <input class="feedback__yourself-input" type="text" name="surname" id="user-surname" placeholder="Иванов">
-          <label class="feedback__yourself-label" for="user-patronymic">Фамилия*:</label>
-          <input class="feedback__yourself-input" type="text" name="patronymic" id="user-patronymic"
-            placeholder="Александрович">
+          <label class="feedback__yourself-item">
+            <span class="feedback__yourself-text">Имя*:</span>
+            <input class="feedback__yourself-input" type="text" name="name" placeholder="Петр" required>
+          </label>
+          <label class="feedback__yourself-item">
+            <span class="feedback__yourself-text">Фамилия*:</span>
+            <input class="feedback__yourself-input" type="text" name="surname" placeholder="Иванов" required>
+          </label>
+          <label class="feedback__yourself-item">
+            <span class="feedback__yourself-text">Отчество:</span>
+            <input class="feedback__yourself-input" type="text" name="patronymic" placeholder="Александрович">
+          </label>
+
         </fieldset>
 
-        <fieldset class="feedback__contact">
+        <fieldset class="feedback__section feedback__section--contact">
           <legend class="feedback__title">Контактная информация:</legend>
           <label class="feedback__contact-label" for="user-phone">Контактный телефон*:</label>
           <input class="feedback__contact-input feedback__contact-input--phone" type="text" name="phone" id="user-phone"
@@ -73,7 +79,7 @@
             placeholder="Введите e-mail">
         </fieldset>
 
-        <fieldset class="feedback__effect">
+        <fieldset class="feedback__section feedback__section--effect">
           <legend class="feedback__title">Ваше общее впечатление:</legend>
           <ul class="feedback__effect-list">
             <li>
@@ -102,7 +108,7 @@
           </ul>
         </fieldset>
 
-        <fieldset class="feedback__places">
+        <fieldset class="feedback__section feedback__section--places">
           <legend class="feedback__title">Посещенные достопримечательности:</legend>
           <ul class="feedback__places-list">
             <li>
@@ -136,7 +142,7 @@
           </ul>
         </fieldset>
 
-        <fieldset class="feedback__review">
+        <fieldset class="feedback__section feedback__section--review">
           <h3 class="feedback__title">Опишите свои эмоции:</h3>
           <textarea name="review" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
