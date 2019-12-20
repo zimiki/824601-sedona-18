@@ -1,0 +1,31 @@
+.copyright {
+  display: flex;
+  width: 129px;
+  justify-content: space-between;
+}
+
+.copyright__text {
+  padding-top: 7px;
+  color: #000000;
+}
+
+.copyright__icon {
+  &:hover {
+    fill: @blue;
+  }
+
+  &:active {
+    fill: #b2b2b2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+  }
+
+  .copyright__text {
+    padding-top: 5px;
+    margin-right: 13px;
+  }
+}
