@@ -135,14 +135,17 @@
   background-color: @grey;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: @grey-hover;
   }
 
   &:active {
     background-color: @grey-active;
   }
+}
+
+.feedback__radio-input:focus + .feedback__radio-icon {
+  box-shadow: 0 0 0 2px #9ebdf2;
 }
 
 .feedback__radio-input:checked + .feedback__radio-icon::after {
@@ -198,6 +201,10 @@
   background-repeat: no-repeat;
   background-size: 25px auto;
   background-position: center;
+}
+
+.feedback__checkbox:focus + .feedback__check-icon {
+  box-shadow: 0 0 0 2px #9ebdf2;
 }
 
 .feedback__checkbox:active + .feedback__check-icon {
