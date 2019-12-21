@@ -1,3 +1,8 @@
+.controls {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .controls__progress-bar {
   position: relative;
   display: flex;
@@ -5,7 +10,6 @@
   padding-left: 21px;
   padding-right: 21px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .controls__progress-track {
@@ -18,18 +22,23 @@
 
 .controls__progress-controls {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background-color: #ffffff;
   border-radius: 5px;
-  left: 20%;
+  left: 15%;
   top: 17px;
   z-index: 3;
 }
 
 .controls-panel {
+  display: flex;
+  justify-content: flex-start;
   height: 66px;
   background-color: @grey;
+  padding-top: 23px;
+  padding-right: 23px;
+  padding-left: 25px;
 }
 
 .controls-replay,
@@ -47,3 +56,49 @@
   }
 }
 
+.controls-subtitles {
+  margin-right: 31px;
+  margin-left: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .controls__progress-bar {
+    position: absolute;
+    width: calc(100% - 260px);
+    left: 93px;
+    top: 26px;
+    padding: 0;
+  }
+
+  .controls__progress-controls {
+    left: 29%;
+  }
+
+  .controls-panel {
+    background-color: transparent;
+    padding-top: 36px;
+    padding-right: 42px;
+    padding-left: 35px;
+  }
+
+  .controls-replay,
+  .controls-subtitles,
+  .controls-fullscreen {
+    fill: #ffffff;
+
+
+    &:hover {
+      fill: #c2c2c2;
+    }
+
+    &:active {
+      fill: #949494;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls__progress-controls {
+    left: 21%;
+  }
+}

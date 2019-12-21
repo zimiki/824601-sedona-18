@@ -70,9 +70,9 @@
         </fieldset>
 
         <fieldset class="feedback__section feedback__section--contact">
-          <legend class="feedback__title">Контактная информация:</legend>
+          <legend class="feedback__title feedback__title--line">Контактная информация:</legend>
           <label class="feedback__contact-label feedback__contact-label--phone">
-            <span class="feedback__text">Контактный телефон*:</span>
+            <span class="feedback__text"><span class="feedback__short">Контактный</span> телефон*:</span>
             <input class="feedback__text-input" type="text" name="phone" placeholder="Введите телефон" required>
           </label>
 
@@ -114,30 +114,30 @@
         </fieldset>
 
         <fieldset class="feedback__section feedback__section--places">
-          <legend class="feedback__title">Посещенные достопримечательности:</legend>
+          <legend class="feedback__title feedback__title--line">Посещенные достопримечательности:</legend>
           <ul class="feedback__places-list">
-            <li>
+            <li class="feedback__places-item">
               <label class="feedback__check">
                 <input class="visually-hidden feedback__checkbox" type="checkbox" name="bridge" id="bridge" checked>
                 <span class="feedback__check-icon"></span>
                 <span class="feedback__text-selection">Мост Дьявола</span>
               </label>
             </li>
-            <li>
+            <li class="feedback__places-item">
               <label class="feedback__check">
                 <input class="visually-hidden feedback__checkbox" type="checkbox" name="mount" id="mount" checked>
                 <span class="feedback__check-icon"></span>
                 <span class="feedback__text-selection">Гора-Колокол</span>
               </label>
             </li>
-            <li>
+            <li class="feedback__places-item">
               <label class="feedback__check">
                 <input class="visually-hidden feedback__checkbox" type="checkbox" name="park" id="park" checked>
                 <span class="feedback__check-icon"></span>
                 <span class="feedback__text-selection">Слайд-парк</span>
               </label>
             </li>
-            <li>
+            <li class="feedback__places-item">
               <label class="feedback__check">
                 <input class="visually-hidden feedback__checkbox" type="checkbox" name="rocks" id="rocks">
                 <span class="feedback__check-icon"></span>
@@ -148,11 +148,12 @@
         </fieldset>
 
         <fieldset class="feedback__section feedback__section--review">
-          <legend class="feedback__title">Опишите свои эмоции:</legend>
+          <legend class="feedback__title feedback__title--line">Опишите свои эмоции:</legend>
           <textarea class="feedback__text-input feedback__text-input--area" name="review"
             placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="button feedback__button" type="submit">Отправить отзыв</button>
+        <span class="feedback__note">* — Обязательные поля</span>
       </form>
     </section>
   </main>

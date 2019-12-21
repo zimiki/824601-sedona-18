@@ -11,6 +11,7 @@
 }
 
 .feedback__section {
+  position: relative;
   padding-top: 0;
   padding-right: 20px;
   padding-bottom: 5px;
@@ -44,7 +45,6 @@
 }
 
 .feedback__text-input {
-  position: relative;
   flex-grow: 1;
   width: 100%;
   font-size: 18px;
@@ -56,8 +56,8 @@
   border: 4px solid #f2f2f2;
   padding-top: 12px;
   padding-bottom: 14px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
   .placeholder();
 
   &:hover {
@@ -73,7 +73,7 @@
 }
 
 .feedback__text-input--email {
-  position: relative;
+  /*position: relative;*/
   margin: 0;
   padding-right: 58px;
 }
@@ -257,4 +257,225 @@
 
 .feedback__section--review .feedback__title {
   padding-bottom: 19px;
+}
+
+.feedback__note {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    width: 100%;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .feedback__form {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    margin: 0;
+  }
+
+  .feedback__title {
+    font-size: 21px;
+    line-height: 25px;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 58px;
+  }
+
+  .feedback__section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .feedback__section--effect {
+    width: 50%;
+    order: -1;
+
+    & .feedback__title {
+      text-align: start;
+    }
+
+    & .feedback__text-selection {
+      margin-left: 19px;
+    }
+  }
+
+  .feedback__radio {
+    margin-bottom: 21px;
+  }
+
+  .feedback__section--yourself {
+    width: 50%;
+    padding-left: 58px;
+
+    & .feedback__title {
+      text-align: start;
+    }
+  }
+
+  .feedback__section--yourself::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 292px;
+    background-color: #dbdbdb;
+    left: 0;
+    bottom: 30px;
+    z-index: 5;
+  }
+
+  .feedback__section--contact {
+    margin-top: 42px;
+    margin-bottom: 23px;
+
+    & .feedback__title {
+      padding-bottom: 25px;
+    }
+  }
+
+  .feedback__contact-label {
+    margin-bottom: 25px;
+  }
+
+  .feedback__section--places {
+    width: 100%;
+    margin-bottom: 32px;
+
+    & .feedback__title {
+      padding-bottom: 45px;
+    }
+  }
+
+  .feedback__places-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .feedback__places-item {
+    width: 50%;
+
+    &:nth-child(odd) {
+      padding-left: 95px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 30px;
+    }
+  }
+
+  .feedback__check {
+    margin-bottom: 31px;
+  }
+
+  .feedback__section--review {
+    width: 100%;
+
+    & .feedback__title {
+      padding-bottom: 59px;
+    }
+  }
+
+  .feedback__title--line {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+  }
+
+  .feedback__button {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 57px;
+    margin-bottom: 59px;
+  }
+
+  .feedback__note {
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    width: 100%;
+    padding-right: 120px;
+    padding-left: 120px;
+    margin-top: -15px;
+  }
+
+  .feedback__section--effect {
+    & .feedback__title {
+      text-align: start;
+      margin-left: 80px;
+    }
+
+    & .feedback__text-selection {
+      margin-left: 22px;
+    }
+  }
+
+  .feedback__section--yourself {
+    padding-left: 80px;
+
+    & .feedback__title {
+      text-align: start;
+    }
+  }
+
+  .feedback__title--line::before,
+  .feedback__title--line::after {
+    width: 280px;
+  }
+
+  .feedback__short {
+    display: none;
+  }
+
+  .feedback__section--contact {
+    margin-bottom: 23px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feedback__contact-label--phone {
+    width: 400px;
+    border: 1px solid red;
+  }
+
+  .feedback__contact-label--email {
+    width: 480px;
+    border: 1px solid green;
+  }
+
+  .feedback__contact-label {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & .feedback__text {
+      margin: 0;
+    }
+
+    & .feedback__text-input {
+      width: 315px;
+      flex-grow: 0;
+    }
+  }
 }
