@@ -145,7 +145,7 @@
 }
 
 .feedback__radio-input:focus + .feedback__radio-icon {
-  box-shadow: 0 0 0 2px #9ebdf2;
+  background-color: @grey-hover;
 }
 
 .feedback__radio-input:checked + .feedback__radio-icon::after {
@@ -204,7 +204,7 @@
 }
 
 .feedback__checkbox:focus + .feedback__check-icon {
-  box-shadow: 0 0 0 2px #9ebdf2;
+  background-color: @grey-hover;
 }
 
 .feedback__checkbox:active + .feedback__check-icon {
@@ -388,6 +388,7 @@
 
     &::before,
     &::after {
+      display: block;
       content: "";
       width: 125px;
       height: 1px;
@@ -448,6 +449,9 @@
 
   .feedback__section--contact {
     margin-bottom: 23px;
+  }
+
+  .feedback__contact-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -456,12 +460,10 @@
 
   .feedback__contact-label--phone {
     width: 400px;
-    border: 1px solid red;
   }
 
   .feedback__contact-label--email {
     width: 480px;
-    border: 1px solid green;
   }
 
   .feedback__contact-label {
