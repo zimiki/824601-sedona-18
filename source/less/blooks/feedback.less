@@ -34,8 +34,8 @@
   color: #000000;
   text-align: center;
   margin: 0;
-  padding-top: 18px;
-  padding-bottom: 22px;
+  margin-top: 18px;
+  margin-bottom: 22px;
 }
 
 .feedback__yourself-item {
@@ -256,7 +256,7 @@
 }
 
 .feedback__section--review .feedback__title {
-  padding-bottom: 19px;
+  margin-bottom: 19px;
 }
 
 .feedback__note {
@@ -281,8 +281,8 @@
     font-size: 21px;
     line-height: 25px;
     margin: 0;
-    padding-top: 5px;
-    padding-bottom: 58px;
+    margin-top: 5px;
+    margin-bottom: 58px;
   }
 
   .feedback__section {
@@ -325,7 +325,7 @@
     height: 292px;
     background-color: #dbdbdb;
     left: 0;
-    bottom: 30px;
+    bottom: 25px;
     z-index: 5;
   }
 
@@ -334,7 +334,7 @@
     margin-bottom: 23px;
 
     & .feedback__title {
-      padding-bottom: 25px;
+      margin-bottom: 25px;
     }
   }
 
@@ -347,7 +347,7 @@
     margin-bottom: 32px;
 
     & .feedback__title {
-      padding-bottom: 45px;
+      margin-bottom: 45px;
     }
   }
 
@@ -376,7 +376,7 @@
     width: 100%;
 
     & .feedback__title {
-      padding-bottom: 59px;
+      margin-bottom: 59px;
     }
   }
 
@@ -449,6 +449,10 @@
 
   .feedback__section--contact {
     margin-bottom: 23px;
+
+    & .feedback__title {
+      margin-bottom: 74px;
+    }
   }
 
   .feedback__contact-wrapper {
@@ -479,5 +483,45 @@
       width: 315px;
       flex-grow: 0;
     }
+  }
+
+  .feedback__section--places {
+    margin-bottom: 29px;
+  }
+
+  .feedback__places-list {
+    justify-content: space-between;
+  }
+
+  .feedback__places-item {
+    width: 210px;
+
+    &:nth-child(odd) {
+      padding-left: 0;
+    }
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  .feedback__check {
+    justify-content: center;
+  }
+
+  .feedback__check--first {
+    justify-content: start;
+  }
+
+  .feedback__section--places .feedback__text-selection {
+    margin-left: 26px;
+  }
+
+  .feedback__button {
+    margin-bottom: 65px;
   }
 }
