@@ -20,7 +20,7 @@
           <a class="main-nav__link" href="photo.html">Фото и видео</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link-active">Форма отзыва</a>
+          <a class="main-nav__link main-nav__link--active">Форма отзыва</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a>
@@ -52,54 +52,109 @@
       <h2 class="visually-hidden">Форма для отправки отзывов</h2>
       <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset class="feedback__yourself">
+        <fieldset class="feedback__section feedback__section--yourself">
           <h3 class="feedback__title">Представьтесь:</h3>
-          <label class="feedback__label">
+          <label class="feedback__yourself-item">
             <span class="feedback__text">Имя*:</span>
-            <input class="feedback__input" type="text" name="user_name" placeholder="Петр">
+            <input class="feedback__text-input" type="text" name="name" placeholder="Петр" required>
           </label>
-          <label class="feedback__label">
+          <label class="feedback__yourself-item">
             <span class="feedback__text">Фамилия*:</span>
-            <input class="feedback__input" type="text" name="user_surname" placeholder="Иванов">
+            <input class="feedback__text-input" type="text" name="surname" placeholder="Иванов" required>
           </label>
-          <label class="feedback__label">
+          <label class="feedback__yourself-item">
             <span class="feedback__text">Отчество:</span>
-            <input class="feedback__input" type="text" name="user_patronymic" placeholder="Александрович">
+            <input class="feedback__text-input" type="text" name="patronymic" placeholder="Александрович">
           </label>
+
         </fieldset>
 
-        <fieldset class="feedback__contacts">
-          <h3 class="feedback__title">Контактная информация:</h3>
+        <fieldset class="feedback__section feedback__section--contact">
+          <h3 class="feedback__title feedback__title--line">Контактная информация:</h3>
+          <div class="feedback__contact-wrapper">
+            <label class="feedback__contact-label feedback__contact-label--phone">
+              <span class="feedback__text"><span class="feedback__short">Контактный</span> телефон*:</span>
+              <input class="feedback__text-input" type="text" name="phone" placeholder="Введите телефон" required>
+            </label>
+
+            <label class="feedback__contact-label feedback__contact-label--email">
+              <span class="feedback__text">Электронная почта*:</span>
+              <input class="feedback__text-input" type="text" name="email" placeholder="Введите e-mail" required>
+            </label>
+          </div>
         </fieldset>
 
-        <fieldset class="feedback__contacts">
+        <fieldset class="feedback__section feedback__section--effect">
           <h3 class="feedback__title">Ваше общее впечатление:</h3>
-          Скорее положительное
-          Скорее отрицательное
-          Затрудняюсь ответить
+          <ul class="feedback__effect-list">
+            <li>
+              <label class="feedback__radio">
+                <input class="visually-hidden feedback__radio-input" type="radio" name="effect" id="effect-good"
+                  value="Скорее положительное" checked>
+                <span class="feedback__radio-icon"></span>
+                <span class="feedback__text-selection">Скорее положительное</span>
+              </label>
+            </li>
+            <li>
+              <label class="feedback__radio">
+                <input class="visually-hidden feedback__radio-input" type="radio" name="effect" id="effect-bad"
+                  value="Скорее отрицательное">
+                <span class="feedback__radio-icon"></span>
+                <span class="feedback__text-selection">Скорее отрицательное</span>
+              </label>
+            </li>
+            <li>
+              <label class="feedback__radio">
+                <input class="visually-hidden feedback__radio-input" type="radio" name="effect" id="effect-indefinite"
+                  value="Затрудняюсь ответить">
+                <span class="feedback__radio-icon"></span>
+                <span class="feedback__text-selection">Затрудняюсь ответить</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
-        <fieldset class="feedback__effect">
-          <h3 class="feedback__title">Ваше общее впечатление:</h3>
-          Скорее положительное
-          Скорее отрицательное
-          Затрудняюсь ответить
+        <fieldset class="feedback__section feedback__section--places">
+          <h3 class="feedback__title feedback__title--line">Посещенные достопримечательности:</h3>
+          <ul class="feedback__places-list">
+            <li class="feedback__places-item">
+              <label class="feedback__check feedback__check--first">
+                <input class="visually-hidden feedback__checkbox" type="checkbox" name="bridge" id="bridge" checked>
+                <span class="feedback__check-icon"></span>
+                <span class="feedback__text-selection">Мост Дьявола</span>
+              </label>
+            </li>
+            <li class="feedback__places-item">
+              <label class="feedback__check">
+                <input class="visually-hidden feedback__checkbox" type="checkbox" name="mount" id="mount" checked>
+                <span class="feedback__check-icon"></span>
+                <span class="feedback__text-selection">Гора-Колокол</span>
+              </label>
+            </li>
+            <li class="feedback__places-item">
+              <label class="feedback__check">
+                <input class="visually-hidden feedback__checkbox" type="checkbox" name="park" id="park" checked>
+                <span class="feedback__check-icon"></span>
+                <span class="feedback__text-selection">Слайд-парк</span>
+              </label>
+            </li>
+            <li class="feedback__places-item">
+              <label class="feedback__check">
+                <input class="visually-hidden feedback__checkbox" type="checkbox" name="rocks" id="rocks">
+                <span class="feedback__check-icon"></span>
+                <span class="feedback__text-selection">Красные скалы</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
-        <fieldset class="feedback__places">
-          <h3 class="feedback__title">Посещенные достопримечательности:</h3>
-          Мост Дьявола
-          Гора-Колокол
-          Слайд-парк
-          Красные скалы
+        <fieldset class="feedback__section feedback__section--review">
+          <h3 class="feedback__title feedback__title--line">Опишите свои эмоции:</h3>
+          <textarea class="feedback__text-input feedback__text-input--area" name="review"
+            placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-
-        <fieldset class="feedback__review">
-          <h3 class="feedback__title">Опишите свои эмоции:</h3>
-          <textarea name="user_review" placeholder="Опишите подробно все свои восторги"></textarea>
-        </fieldset>
-
-        <button type="submit" class="button">Отправить отзыв</button>
+        <button class="button feedback__button" type="submit">Отправить отзыв</button>
+        <span class="feedback__note">* — Обязательные поля</span>
       </form>
     </section>
   </main>
@@ -135,17 +190,36 @@
         </a>
       </li>
     </ul>
-    <div class="page-footer__copyright">
-      <b class="page-footer__copyright-text">Разработано</b>
-      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden"> HTML Academy</span>
-        <svg class="page-footer__copyright-icon" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09">
+        <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09">
           <path
             d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z" />
         </svg>
       </a>
     </div>
   </footer>
+
+  <section class="popup-failure">
+    <div class="popup-failure__wrapper">
+      <h2 class="popup-failure__title">Что-то пошло не&nbsp;так!</h2>
+      <p class="popup-failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="button popup-failure__button" type="button">Ок</button>
+    </div>
+  </section>
+
+  <section class="popup-success popup-success--close">
+    <div class="popup-success__wrapper">
+      <h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
+      <p class="popup-success__text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам.
+        В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+    </div>
+    <div class="popup-success__button-wrapper">
+      <button class="button popup-success__button" type="button">Закрыть окно</button>
+    </div>
+  </section>
 
   <script src="js/main-nav.js"></script>
 
