@@ -9,6 +9,8 @@
   display: block;
   margin-top: 22px;
   margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
 }
 
 .photo__info {
@@ -63,9 +65,12 @@
     display: flex;
     background-color: #f2f2f2;
     justify-content: space-between;
-
     min-height: 80px;
     padding-left: 20px;
+  }
+
+  .gallery__item:nth-child(3):nth-child(odd) .photo__info-wrapper {
+    background-color: #eaeaea;
   }
 
   .photo__info {
@@ -92,11 +97,16 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .photo__info-wrapper {
     margin-top: -80px;
     background: url("../img/photo-shadow.png");
+    position: relative;
+    z-index: 3;
+  }
+
+  .gallery__item:nth-child(3):nth-child(odd) .photo__info-wrapper {
+    background-color: transparent;
   }
 
   .photo__name,
