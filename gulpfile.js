@@ -21,7 +21,8 @@ var uglify = require("gulp-uglify");
 gulp.task("images", function () {
   return gulp.src([
     "source/img/**/*.{png,jpg,svg}",
-    "!source/img/icon-social*.svg"
+    "!source/img/icon-social*.svg",
+    "!source/img/sprite*.svg"
   ])
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
@@ -44,6 +45,7 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
+    "source/img/sprite*.svg",
     "source/*.ico"
   ], {
     base: "source"
